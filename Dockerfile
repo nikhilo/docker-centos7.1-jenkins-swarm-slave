@@ -8,7 +8,10 @@ RUN yum update -y
 RUN yum install -y wget && wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-linux-x64.rpm
 RUN rpm -ivh jdk-8u51-linux-x64.rpm && rm jdk-8u51-linux-x64.rpm
 
-RUN yum install -y docker git
+RUN yum install -y git
+
+# install docker
+RUN curl -sSL https://get.docker.com/ | sh
 
 ENV JENKINS_SWARM_CLIENT_VERSION 2.0
 ENV JENKINS_DATA_DIRECTORY /var/lib/jenkins

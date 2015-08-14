@@ -9,4 +9,4 @@ Note: By mounting the docker socket in the container the jenkins slave can run d
 
 Example: run the container and setup to take docker builds via a label
 
-```docker run -v /var/run/docker.sock:/var/run/docker.sock -it rgoodwin/centos7.1-jenkins-swarm-slave:latest  -master http://<url to jenkins> -name jenkins-docker-slave -labels docker-build```
+```docker run -v /var/run/docker.sock:/var/run/docker.sock -it rgoodwin/centos7.1-jenkins-swarm-slave:latest  -master http://<url to jenkins> -name jenkins-docker-slave -labels docker-build -mode exclusive```
