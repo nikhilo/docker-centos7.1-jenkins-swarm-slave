@@ -21,4 +21,4 @@ RUN curl --create-dirs -sSLo "/usr/share/jenkins/swarm-client-jar-with-dependenc
 
 WORKDIR $JENKINS_DATA_DIRECTORY
 
-ENTRYPOINT [ "java", "-jar", "/usr/share/jenkins/swarm-client-jar-with-dependencies.jar" ]
+ENTRYPOINT [ "java", "-Dfile.encoding=UTF8", "-jar", "/usr/share/jenkins/swarm-client-jar-with-dependencies.jar" ]
